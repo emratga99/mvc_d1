@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft;
 using mvc.DataAccess;
-using Microsoft.Office.Interop;
+
 namespace mvc.Services
 {
     public class MemberServices
@@ -13,10 +14,6 @@ namespace mvc.Services
             var memberList = new DataAccess.StaticDataAccess().getList();
             List<PersonViewModel> viewList = memberList.Select(o => new PersonViewModel(o)).ToList();
             return viewList;
-        }
-        public List<PersonModel> getData()
-        {
-            return new DataAccess.StaticDataAccess().getList(); 
         }
         public List<PersonViewModel> getOldestOnes()
         {

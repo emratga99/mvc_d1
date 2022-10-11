@@ -1,0 +1,29 @@
+﻿@model IEnumerable<mvc.Services.PersonViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table table-bordered table-responsive table-hover">
+ 
+        <tr>
+            <th>FullName </th>
+            <th>Age </th>
+            <th>Gender </th> 
+        </tr>
+        @foreach (var d in Model)
+        {
+            <tr>
+                <td>@d.FullName</td>
+                <td>@d.Age</td>
+                <td>@d.Gender</td> 
+
+            </tr>
+        }
+    </table>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+
