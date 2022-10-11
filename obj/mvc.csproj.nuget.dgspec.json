@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\do1lo\\assignment\\mvc\\mvc.csproj": {}
+    "c:\\Users\\do1lo\\assignment\\mvc_d2\\mvc.csproj": {}
   },
   "projects": {
-    "c:\\Users\\do1lo\\assignment\\mvc\\mvc.csproj": {
+    "c:\\Users\\do1lo\\assignment\\mvc_d2\\mvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\do1lo\\assignment\\mvc\\mvc.csproj",
+        "projectUniqueName": "c:\\Users\\do1lo\\assignment\\mvc_d2\\mvc.csproj",
         "projectName": "mvc",
-        "projectPath": "c:\\Users\\do1lo\\assignment\\mvc\\mvc.csproj",
+        "projectPath": "c:\\Users\\do1lo\\assignment\\mvc_d2\\mvc.csproj",
         "packagesPath": "C:\\Users\\do1lo\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\do1lo\\assignment\\mvc\\obj\\",
+        "outputPath": "c:\\Users\\do1lo\\assignment\\mvc_d2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\do1lo\\AppData\\Roaming\\NuGet\\NuGet.Config",

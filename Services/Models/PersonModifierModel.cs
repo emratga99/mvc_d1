@@ -1,3 +1,4 @@
+using mvc.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,19 @@ namespace mvc.Models
 {
     public class PersonModifierModel
     {
-        
+
+        public PersonModifierModel(PersonModel model)
+        {
+            Id = model.Id;
+            FirstName = model.FirstName;
+            LastName = model.LastName;
+            PhoneNumber = model.PhoneNumber;
+            BirthPlace = model.BirthPlace;
+            IsGraduated = model.IsGraduated;
+            DateOfBirth = model.DateOfBirth;
+            Gender = model.Gender;  
+        }
+        public string? Id { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? Gender { get; set; }

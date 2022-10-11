@@ -3,12 +3,10 @@ using mvc.Services;
 using mvc.Models;
 namespace mvc.Controllers
 {
-    [Route("NashTech")]
     public class RookiesController : Controller
     {
         private MemberServices _service;
 
-        [Route("Rookies/Index")]
         public IActionResult Index()
         {
             return View(_service.getViewList());
@@ -72,23 +70,31 @@ namespace mvc.Controllers
             excel.Quit();
             return RedirectToAction("Index");
         }
-        public IActionResult Create(int number)
+
+        public IActionResult Create()
         {
             return View();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(PersonModifierModel person)
         {
-            return View();
+            return RedirectToAction("Index");
         }
-        public IActionResult Update(int number)
+        public IActionResult Update(string id)
         {
-            return View();
+            var person = _service.getData().Where(o => o.Id == id).First(); 
+            return View(new PersonModifierModel(person));
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Update(PersonModifierModel person)
         {
-            return View();
+            return RedirectToAction("Index");
         }
+        public IActionResult Delete(string id)
+        {
+            return RedirectToAction("Index");
+        } 
     }
 }
