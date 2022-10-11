@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using mvc.Services;
-
+using mvc.Models;
 namespace mvc.Controllers
 {
     [Route("NashTech")]
@@ -72,6 +72,23 @@ namespace mvc.Controllers
             excel.Quit();
             return RedirectToAction("Index");
         }
-
+        public IActionResult Create(int number)
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(PersonModifierModel person)
+        {
+            return View();
+        }
+        public IActionResult Update(int number)
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Update(PersonModifierModel person)
+        {
+            return View();
+        }
     }
 }

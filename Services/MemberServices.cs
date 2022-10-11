@@ -15,6 +15,11 @@ namespace mvc.Services
             List<PersonViewModel> viewList = memberList.Select(o => new PersonViewModel(o)).ToList();
             return viewList;
         }
+        public List<PersonModel> getData()
+        {
+            var memberList = new DataAccess.StaticDataAccess().getList();
+            return memberList;
+        }
         public List<PersonViewModel> getOldestOnes()
         {
             var memberList = new DataAccess.StaticDataAccess().getList();
