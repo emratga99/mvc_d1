@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using mvc.Models;
+using mvc_d2.Interface;
+
 
 namespace mvc.DataAccess
 {
-    public class StaticDataAccess
+    public class StaticDataAccess : IDataAccess
     {
         private List<PersonModel> _people = new List<PersonModel>{
             new PersonModel{

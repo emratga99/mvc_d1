@@ -1,0 +1,22 @@
+﻿@model mvc.Models.PersonModifierModel
+
+@{
+    ViewBag.Title = "Delete Completed!";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Person Deleted</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <p>
+            Person @Model.FirstName @Model.LastName name] was removed from the list successfully!
+        </p>
+    </dl>
+</div>
+<p>
+
+    <button type="button" class="btn btn-secondary>@Html.ActionLink("Back to List", "Index", "Rookies")</button>
+    
+</p>

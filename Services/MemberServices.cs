@@ -4,37 +4,43 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft;
 using mvc.DataAccess;
+using mvc_d2.Interface;
 
 namespace mvc.Services
 {
-    public class MemberServices
+    public class MemberServices : IMemberService
     {
+        private readonly IDataAccess _da; 
+        public MemberServices(IDataAccess dataAccess)
+        {
+            _da = dataAccess;
+        }
         public List<PersonViewModel> getViewList()
         {
-            var memberList = new DataAccess.StaticDataAccess().getList();
+            var memberList = _da.getList();
             List<PersonViewModel> viewList = memberList.Select(o => new PersonViewModel(o)).ToList();
             return viewList;
         }
         public List<PersonModel> getData()
         {
-            var memberList = new DataAccess.StaticDataAccess().getList();
+            var memberList = _da.getList();
             return memberList;
         }
         public List<PersonViewModel> getOldestOnes()
         {
-            var memberList = new DataAccess.StaticDataAccess().getList();
+            var memberList = _da.getList();
             List<PersonViewModel> viewList = memberList.Where(o => o.Age == memberList.Max(o => o.Age)).Select(o => new PersonViewModel(o)).ToList();
             return viewList;
         }
         public List<string> getFullNames()
         {
-            var memberList = new DataAccess.StaticDataAccess().getList();
+            var memberList = _da.getList();
             List<string> viewList = memberList.Select(o => o.FullName).ToList();
             return viewList;
         }
         public List<PersonViewModel> GetMembersBasedOnAge(int logicCase)
         {
-            var memberList = new DataAccess.StaticDataAccess().getList();
+            var memberList = _da.getList();
             switch (logicCase)
             {
                 case 1:

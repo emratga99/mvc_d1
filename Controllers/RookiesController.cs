@@ -1,19 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using mvc.Services;
 using mvc.Models;
+using mvc_d2.Interface;
+using System.Web;
 namespace mvc.Controllers
 {
     public class RookiesController : Controller
     {
-        private MemberServices _service;
+        private IMemberService _service;
 
         public IActionResult Index()
         {
             return View(_service.getViewList());
         }
-        public RookiesController()
+        public RookiesController(IMemberService memberService)
         {
-            _service = new MemberServices();
+            _service = memberService;
         }
         public IActionResult OldestOnes()
         {
@@ -71,6 +73,16 @@ namespace mvc.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult Details(string id)
+        {
+            var person = _service.getData().FirstOrDefault(o => o.Id == id);
+            return View(new PersonModifierModel(person));
+        }
+        [HttpPost]
+        public IActionResult Details(PersonModifierModel person)
+        {
+            return RedirectToAction("Index");
+        }
         public IActionResult Create()
         {
             return View();
@@ -94,7 +106,8 @@ namespace mvc.Controllers
         }
         public IActionResult Delete(string id)
         {
-            return RedirectToAction("Index");
+            var person = _service.getData().Where(o => o.Id == id).First();
+            return View("DeleteCompleted", new PersonModifierModel(person));
         } 
     }
 }

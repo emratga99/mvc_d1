@@ -16,12 +16,12 @@
         @foreach (var d in Model)
         {
             <tr>
-                <td>@d.FullName</td>
+            <td>@Html.ActionLink(@d.FullName, "Details", new { id = @d.Id })</td>
             <td>@d.Age</td>
             <td>@d.Gender</td>
             <td>
-                <button type="button" class="btn btn-secondary">@Html.ActionLink("Update", "Update", new { id = @d.Id })</button>
-                <button type="button" class="btn btn-warning">@Html.ActionLink("Delete", "Delete", new { id = @d.Id })</button>
+                <button type="button" class="btn btn-secondary">@Html.ActionLink("Update", "Update", new { id = @d.Id })</button> 
+                @*<button type="button" class="btn btn-danger">@Html.ActionLink("Delete", "Delete", new { id = @d.Id })</button>*@
             </td> 
         </tr>
         }

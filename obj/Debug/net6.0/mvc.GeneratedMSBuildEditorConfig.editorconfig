@@ -27,12 +27,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/do1lo/assignment/mvc_d2/Views/Rookies/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xJbmRleC5jc2h0bWw=
+[C:/Users/do1lo/assignment/mvc_d2/Views/Rookies/DeleteCompleted.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xEZWxldGVDb21wbGV0ZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/do1lo/assignment/mvc_d2/Views/Rookies/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xQcml2YWN5LmNzaHRtbA==
+[C:/Users/do1lo/assignment/mvc_d2/Views/Rookies/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/do1lo/assignment/mvc_d2/Views/Rookies/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/do1lo/assignment/mvc_d2/Views/Rookies/Update.cshtml]

@@ -28,5 +28,12 @@ namespace mvc.Models
         public string? PhoneNumber { get; set; }
         public string? BirthPlace { get; set; }
         public bool IsGraduated { get; set; }
+        public string sDateOfBirth {
+            get { return DateOfBirth.Value.ToShortDateString(); }
+        }
+        public string sIsGraduated
+        {
+            get { return IsGraduated == true ? "true" : "false"; }
+        }
     }
 }

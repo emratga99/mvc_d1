@@ -4,18 +4,18 @@ using mvc.Models;
 using mvc.Services;
 using Microsoft.Office.Interop;
 using Microsoft.Office.Interop.Excel;
-
+using mvc_d2.Interface;
 namespace mvc.Controllers;
 
 public class HomeController : Controller
 {
-    private MemberServices _service;
+    private IMemberService _service;
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, IMemberService memberServices)
     {
         _logger = logger;
-        _service = new MemberServices();
+        _service = memberServices;
     }
     public IActionResult Index()
     {

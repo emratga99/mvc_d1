@@ -1,8 +1,14 @@
+using mvc.DataAccess;
+using mvc.Services;
+using mvc_d2.Interface;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddTransient<IDataAccess, StaticDataAccess>();
+builder.Services.AddTransient<IMemberService, MemberServices>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -23,5 +29,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+app.UseRouting();
 
 app.Run();
